@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制圆形</title>
+    <style>
+    </style>
+</head>
+<body>
+<canvas id="myCanvas">
+</canvas>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    let getPixelRatio = function (context) {
+        let backingStore = context.backingStorePixelRatio ||
+            context.webkitBackingStorePixelRatio ||
+            context.mozBackingStorePixelRatio ||
+            context.msBackingStorePixelRatio ||
+            context.oBackingStorePixelRatio ||
+            context.backingStorePixelRatio || 1;
+        return (window.devicePixelRatio || 1) / backingStore;
+    };
+    $(function () {
+        let canvas = $('#myCanvas');
+        canvas.attr("height", $(window).height());
+        canvas.attr("width", $(window).width());
+        let context = canvas.get(0).getContext("2d");
+
+        let ratio=getPixelRatio(context)
+        console.log(ratio)
+        context.beginPath()
+        
+        context.arc(230,90,50,0,Math.PI*2,false)
+        //圆弧原点的(x,y)坐标值（也是我们例子中的圆心）、圆弧半径、开始角度、结束角度和一个布尔值，如果圆弧按逆时针方向绘制，那么它为true，否则它为false
+        context.closePath()
+        // context.stroke()
+        context.fill()
+
+    })
+
+</script>
+</body>
+</html>

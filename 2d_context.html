@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2d渲染上下文</title>
+
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200">
+
+    </canvas>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            let canvas=$('#myCanvas');
+            canvas.attr("height",$(window).height());
+            canvas.attr("width",$(window).width());
+            let context=canvas.get(0).getContext("2d");
+            context.fillRect(0,0,200,200)
+            context.strokeRect(210,0,200,200)
+            context.beginPath()
+            context.moveTo(500,200)
+            context.lineTo(500,600)
+            context.closePath()
+            context.stroke()
+
+        })
+
+    </script>
+</body>
+</html>

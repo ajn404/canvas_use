@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2d渲染上下文</title>
+
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200">
+
+    </canvas>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            let canvas=$('#myCanvas');
+            canvas.attr("height",$(window).height());
+            canvas.attr("width",$(window).width());
+            let context=canvas.get(0).getContext("2d");
+            context.beginPath()
+            context.moveTo(0,0)
+            console.log()
+            for(let i=0,j=0;i<10000;i+=1,j=i){
+                context.lineTo(i*Math.random(),j*Math.random())
+            }
+            context.closePath()
+            context.stroke()
+
+        })
+
+    </script>
+</body>
+</html>
