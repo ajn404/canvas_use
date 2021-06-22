@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue列表排序过度</title>
+    <style>
+        .v-move{
+            transition: transform 1s;
+        }
+        img{
+            height: 100px;
+            margin-left: 10px;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+
+        }
+
+        #root{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+<body>
+<div id="root" @click="shuffle">
+
+    <transition-group tag="ul">
+        <li v-for="item in list" :key="item">
+            <img :src="item">
+        </li>
+    </transition-group>
+</div>
+
+<script src="https://cdn.bootcss.com/vue/2.6.6/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="application/javascript">
+    var vm =new Vue({
+        el:'#root',
+        data:{
+            list:[78590,93368,96357,124519,235577,175470,595064,584470].map(function (res) {
+                return "./img/"+res+".jpg"
+            })
+        },
+        methods:{
+            shuffle:function () {
+                this.list=_.shuffle(this.list)
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
