@@ -42,23 +42,6 @@
 
 <script src="https://cdn.bootcss.com/vue/2.6.6/vue.js"></script>
 <script type="application/javascript">
-    Vue.component('counter',{
-        data(){
-            return {
-                number:0
-            }
-        },
-
-        template:
-            "<button @click='handleClick'>{{number}}</button>",
-
-        methods:{
-            handleClick(){
-                this.number++;
-                this.$emit('change')
-            }
-        }
-    })
 
     var vm =new Vue({
         el:'#root',
@@ -68,11 +51,9 @@
             }
         },
         methods:{
-          handleChange(){
-            this.total= this.$refs.one.number+this.$refs.two.number;
-              console.log(this.$refs.one)
-              console.log(this.$refs.one)
-          }
+            handleChange(){
+                this.total= this.$refs.one.number+this.$refs.two.number;
+            }
         }
     })
 
