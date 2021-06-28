@@ -1,8 +1,7 @@
 @mixin pixelize($size, $matrix, $colors, $default-color: null) {
   $ret: "";
-  $moz: "";
   @if ($default-color == null) {
-    // count number of each color in matrix and decide main color by highest count
+    // 把出现次数最多的颜色作为 default-color
     $matrix-colors: ();
     $counts: ();
     @each $row in $matrix {
@@ -19,29 +18,23 @@
         }
       }
     }
-    // use index of the highest count to get the corresponding matrix color
     $default-color: nth($colors, nth($matrix-colors, index($counts, max($counts...))));
   }
-
+  // 根据位置拼接 box-shadow 中的位移和颜色
   @for $i from 1 through length($matrix) {
     $row: nth($matrix, $i);
 
     @for $j from 1 through length($row) {
       $dot: nth($row, $j);
-
       @if $dot != 0 {
         @if $ret != "" {
           $ret: $ret + ",";
-          $moz: $moz + ",";
         }
-
         $color: nth($colors, $dot);
         @if $color == $default-color {
           $ret: $ret + ($j * $size) + " " + ($i * $size);
-          $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em";
         } @else {
           $ret: $ret + ($j * $size) + " " + ($i * $size) + " " + $color;
-          $moz: $moz + ($j * $size) + " " + ($i * $size) + " 0 0.020em " + $color;
         }
       }
     }
@@ -51,9 +44,4 @@
   height: $size;
   color: $default-color;
   box-shadow: unquote($ret);
-
-  // firefox only style
-  @supports (-moz-appearance: meterbar) {
-    box-shadow: unquote($moz);
-  }
 }

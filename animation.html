@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+
+    <style>
+      @keyframes bouncing {
+        0% {
+          bottom: 0;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+        100% {
+          bottom: 50px;
+          box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+        }
+      }
+
+      .box {
+        animation: bouncing 0.5s cubic-bezier(0.1, 0.25, 0.1, 1) 0s infinite
+        /* https://cubic-bezier.com/#.1,.25,.1,1 */
+          alternate both;
+        background: lightslategrey;
+        border-radius: 2px;
+        display: inline-block;
+        color: white;
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-weight: 300;
+        letter-spacing: 0.2em;
+        padding: 1em 2em 1.1em;
+        position: relative;
+        text-decoration: none;
+
+        text-transform: uppercase;
+        vertical-align: top;
+        margin-top: 50vh;
+        margin-left: 50vw;
+      }
+      body {
+        background: #999999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">I'm a box,i can jump</div>
+  </body>
+</html>
