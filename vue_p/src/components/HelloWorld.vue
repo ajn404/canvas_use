@@ -1,6 +1,10 @@
 <template>
     <div class="box">
-        <div class="tit">我的唱片</div>
+        <div class="tit" >
+          <router-link tag="a" to="page1    ">
+            我的唱片
+          </router-link>
+        </div>
     </div>
 </template>
 
@@ -39,6 +43,9 @@ export default {
             display: flex;
             justify-content: center;
             animation: rotating 4s linear infinite;
+            a{
+                color: #fff;
+            }
 
         }
         &:hover {
@@ -54,5 +61,4 @@ export default {
         0%{transform: rotate(0deg)}
         100%{transform: rotate(360deg)}
     }
-
 </style>
