@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d变换</title>
+    <style>
+        body{
+            perspective: 800px;
+            transform-style: preserve-3d;
+            background: #112200;
+        }
+
+        .box{
+            animation:translating3d 10s alternate infinite both;
+            width: 100px;
+            height: 100px;
+            background:#000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 45vh auto;
+
+        }
+        @keyframes translating3d {
+            0%{transform: translate3d(0,0,0)}
+            100%{transform: translate3d(0,0,799px)}
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        3d变换
+    </div>
+</body>
+</html>
