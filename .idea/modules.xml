@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/canvas的使用.iml" filepath="$PROJECT_DIR$/.idea/canvas的使用.iml" />
-      <module fileurl="file://$PROJECT_DIR$/vue_p/vue_p.iml" filepath="$PROJECT_DIR$/vue_p/vue_p.iml" />
     </modules>
   </component>
 </project>
