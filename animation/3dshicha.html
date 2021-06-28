@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视差</title>
+    <style>
+
+        html {
+            overflow: hidden;
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+            perspective: 1px;
+            transform-style: preserve-3d;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        header {
+            width: 100vw;
+            height: 80vh;
+        }
+        .bg1::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(../img/bg.jpg) no-repeat;
+            background-size: cover;
+            z-index: -1;
+            transform: translateZ(-1px) scale(2.1);
+        }
+        .bg2::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url(../img/bg2.jpg) no-repeat;
+            background-size: cover;
+            z-index: -1;
+            transform: translateZ(-1px) scale(2.1);
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            background-color: #95a5a6;
+        }
+
+        article{
+            width: 90vw;
+            max-width: 960px;
+            padding: 6em  0;
+            color: white;
+            font-size: 18px;
+            text-align: justify;
+            letter-spacing: 0.075em;
+            text-indent: 2em;
+            line-height: 1.8em;
+        }
+
+    </style>
+</head>
+<body >
+<header class="bg1">
+    <h1>css 视差效果</h1>
+</header>
+<main>
+    <article>
+        <p>夜，似乎静的可怕，路灯下的孤影显得那么单薄，夜，似乎应和着她孤寂的心灵，黑的让人发指，在黑夜的包围下，她是那么瘦小，她缓缓向前走着，突然在四下无人的街头，哭的像个孩子，哦，突然忘了，她也只是一个十几岁的孩子，她瘫坐在地上，哭的撕心裂肺，她双手环抱着自己，像个做错事的孩子一样蜷缩着，压抑在她心头的委屈，瞬间爆发了，天空中弥漫的小雨，打湿她的发梢，眼泪和雨水融为一体，参杂着雨水的眼泪，别以往的都苦涩，苦涩的是眼泪，破碎的是心。</p>
+        <p>“枕边书，怀中猫，意中人。”很文艺的一句话，很适合表白，也是大多数文艺的人喜欢的一句话。曾经有一个人对我说过这句话，那也是我第一次听到这句话，听完后我立马喜欢上了这句话。内心也有点心花怒放，因为我遇到了爱情。但后来因为某些原因曲终人散。抛开个人感情问题，谈谈这句话吧。这是一句很棒的表白句子。</p>
+    </article>
+</main>
+<header class="bg2">
+    <h1>css 视差效果</h1>
+</header>
+<main>
+    <article>
+        <p>夜，似乎静的可怕，路灯下的孤影显得那么单薄，夜，似乎应和着她孤寂的心灵，黑的让人发指，在黑夜的包围下，她是那么瘦小，她缓缓向前走着，突然在四下无人的街头，哭的像个孩子，哦，突然忘了，她也只是一个十几岁的孩子，她瘫坐在地上，哭的撕心裂肺，她双手环抱着自己，像个做错事的孩子一样蜷缩着，压抑在她心头的委屈，瞬间爆发了，天空中弥漫的小雨，打湿她的发梢，眼泪和雨水融为一体，参杂着雨水的眼泪，别以往的都苦涩，苦涩的是眼泪，破碎的是心。</p>
+        <p>“枕边书，怀中猫，意中人。”很文艺的一句话，很适合表白，也是大多数文艺的人喜欢的一句话。曾经有一个人对我说过这句话，那也是我第一次听到这句话，听完后我立马喜欢上了这句话。内心也有点心花怒放，因为我遇到了爱情。但后来因为某些原因曲终人散。抛开个人感情问题，谈谈这句话吧。这是一句很棒的表白句子。</p>
+    </article>
+</main>
+
+
+</html>
