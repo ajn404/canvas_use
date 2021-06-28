@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #gradients {
+        width: 100%;
+        height: 100%;
+    }
+
+    #gradients > ul {
+        list-style: none;
+        padding: 0;
+        margin: 4px;
+    }
+
+    #gradients > ul > li {
+        width: calc(33.3% - 3px);
+        height: 200px;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+    .gradient1 {
+        background: -webkit-linear-gradient(left, transparent 50%, rgba(255, 0, 0, 0.6) 50%), -webkit-linear-gradient(top, transparent 50%, rgba(255, 0, 0, 0.6) 50%);
+        background-size: 30px 30px;
+    }
+
+    .gradient2 {
+        background: -webkit-linear-gradient(left, rgba(204, 204, 204, 0) 48%, #fff 48%, #fff 50%, rgba(204, 204, 204, 0) 50%, rgba(204, 204, 204, 0) 100%), -webkit-linear-gradient(top, #3498db 48%, #fff 48%, #fff 50%, #3498db 50%, #3498db 100%);
+        background-size: 30px 30px;
+    }
+
+    .gradient3 {
+        background: -webkit-repeating-linear-gradient(45deg, rgba(171, 0, 0, 0.6) 10px, transparent 10px, transparent 20px, rgba(0, 186, 255, 0.6) 20px, rgba(0, 186, 255, 0.6) 30px, transparent 30px, transparent 40px, rgba(10, 53, 10, 0.6) 40px, rgba(10, 53, 10, 0.6) 50px, transparent 50px, transparent 60px, rgba(191, 128, 12, 0.6) 60px, rgba(191, 128, 12, 0.6) 70px, transparent 70px, transparent 80px, rgba(165, 165, 28, 0.6) 80px, rgba(165, 165, 28, 0.6) 90px, transparent 90px);
+    }
+
+    .gradient4 {
+        background: -webkit-linear-gradient(left, rgba(204, 204, 204, 0) 44%, #fff 44%, #fff 47%, rgba(204, 204, 204, 0) 47%, rgba(204, 204, 204, 0) 50%, #fff 50%, #fff 53%, rgba(204, 204, 204, 0) 53%, rgba(204, 204, 204, 0) 100%), -webkit-linear-gradient(top, #ccc 44%, #fff 44%, #fff 47%, #ccc 47%, #ccc 50%, #fff 50%, #fff 53%, #ccc 53%, #ccc 100%);
+        background-size: 50px 50px;
+    }
+
+    .gradient5 {
+        background: linear-gradient(135deg, #bbf 25%, transparent 25%) -50px 0, linear-gradient(225deg, #bbf 25%, transparent 25%) -50px 0, linear-gradient(315deg, #bbf 25%, transparent 25%), linear-gradient(45deg, #bbf 25%, transparent 25%);
+        background-size: 25px 25px;
+    }
+
+    .gradient6 {
+        background: radial-gradient(circle at 25% 25%, #ce0042 10%, rgba(0, 0, 0, 0) 15%), radial-gradient(circle at 75% 75%, #ce0042 10%, rgba(0, 0, 0, 0) 15%);
+        background-size: 20px 20px;
+    }
+
+    .gradient7 {
+        background: repeating-radial-gradient(circle at 50% 50%, #386ad8 4%, #386ad8 7%, transparent 12%);
+        background-size: 48px 50px;
+    }
+
+    .gradient8 {
+        background: repeating-radial-gradient(circle at 50% 50%, transparent 15%, #d2006a 18%, #d2006a 23%, transparent 22%);
+        background-size: 25px 50px;
+    }
+
+    .gradient9 {
+        background: -webkit-linear-gradient(45deg, rgba(171, 0, 0, 0.6) 10%, transparent 10%, transparent 20%, rgba(0, 186, 255, 0.6) 20%, rgba(0, 186, 255, 0.6) 30%, transparent 30%, transparent 40%, rgba(10, 53, 10, 0.6) 40%, rgba(10, 53, 10, 0.6) 50%, transparent 50%, transparent 60%, rgba(191, 128, 12, 0.6) 60%, rgba(191, 128, 12, 0.6) 70%, transparent 70%, transparent 80%, rgba(165, 165, 28, 0.6) 80%, rgba(165, 165, 28, 0.6) 90%, transparent 90%, transparent 100%), -webkit-linear-gradient(135deg, rgba(171, 0, 0, 0.6) 10%, transparent 10%, transparent 20%, rgba(0, 186, 255, 0.6) 20%, rgba(0, 186, 255, 0.6) 30%, transparent 30%, transparent 40%, rgba(10, 53, 10, 0.6) 40%, rgba(10, 53, 10, 0.6) 50%, transparent 50%, transparent 60%, rgba(191, 128, 12, 0.6) 60%, rgba(191, 128, 12, 0.6) 70%, transparent 70%, transparent 80%, rgba(165, 165, 28, 0.6) 80%, rgba(165, 165, 28, 0.6) 90%, transparent 90%, transparent 100%);
+    }
+</style>
+<body>
+<script src="./js/jquery-3.6.0.min.js"></script>
+<div id="gradients">
+    <ul class="gradient-block">
+        <li class="gradient1"></li>
+        <li class="gradient2"></li>
+        <li class="gradient3"></li>
+        <li class="gradient4"></li>
+        <li class="gradient5"></li>
+        <li class="gradient6"></li>
+        <li class="gradient7"></li>
+        <li class="gradient8"></li>
+        <li class="gradient9"></li>
+    </ul>
+</div>
+
+</body>
+</html>
