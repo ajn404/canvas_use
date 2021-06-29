@@ -1,0 +1,15 @@
+p:target{
+    background: gold;
+}
+
+p:target i{
+    color: red;
+}
+
+p:target::before{
+    font: 70% sans-serif;
+    content: "🥰";
+    color: limegreen;
+    margin-right: .25em;
+
+}
