@@ -1,0 +1,21 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows:repeat(4,minmax(100px,auto));
+    background: #555;
+}
+.item{
+    grid-column: 2/7;
+    grid-row: 2/4;
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,80px);
+    background: #876543;
+}
+
+.subitem{
+    grid-column: 2/4;
+    grid-row: 1/4;
+    background: #123456;
+}

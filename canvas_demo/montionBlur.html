@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://www.motionblurjs.com/blur.js"></script>
+    <style>
+        @keyframes move {
+            0%{transform: translate(500px,0)}
+            25%{transform: translate(500px,500px)}
+            50%{transform: translate(0,500px)}
+            75%{transform: translate(0,0)}
+            100%{transform: translate(500px,0)}
+        }
+
+        .fadejs{
+            animation: move .1s infinite linear;
+            width: 100px;
+            height: 100px;
+            background: #eeeeee;
+            position: absolute;
+        }
+        .f2{
+            animation-duration: .2s;
+        }
+
+        .f3{
+            animation-duration: .3s;
+        }
+
+        .f4{
+            animation-duration: .4s;
+        }
+
+
+        .blurjs{
+            animation: move 4s infinite linear;
+            width: 100px;
+            height: 100px;
+            background: #118822;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <div  class="fadejs"></div>
+    <div  class="fadejs f2"></div>
+    <div  class="fadejs f3"></div>
+    <div  class="fadejs f4"></div>
+    <div  class="blurjs"></div>
+</body>
+</html>
