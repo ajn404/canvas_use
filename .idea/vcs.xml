@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/asmjs/emsdk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/programming 3d applications with html5 and webgl/zh_webgl/three.js" vcs="Git" />
   </component>
 </project>

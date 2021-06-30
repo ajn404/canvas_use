@@ -6,8 +6,8 @@
                     <template slot="title"><i class="el-icon-menu"></i>6月</template>
                     <el-menu-item-group>
                         <template slot="title">VUE</template>
-                        <el-menu-item index="1-1" @click="printRouter">嵌套路由</el-menu-item>
-                        <el-menu-item index="1-2">暂定</el-menu-item>
+                        <el-menu-item index="1-1" @click="goPage1">嵌套路由</el-menu-item>
+                        <el-menu-item index="1-2" @click="goPage4">模板语法等基础vue</el-menu-item>
                     </el-menu-item-group>
                     <el-menu-item-group title="less">
                         <el-menu-item index="1-3">暂定</el-menu-item>
@@ -80,7 +80,6 @@
         color: #333;
         line-height: 60px;
     }
-
     .el-aside {
         color: #333;
     }
@@ -97,18 +96,26 @@ export default {
       description: '在 Vue 实例内部，你可以通过 $router 访问路由实例。因此你可以调用 this.$router.push'
     }
     const day2 = {
-      date: '2021-06-29',
+      date: '2021-06-30',
       name: 'vue基础',
-      description: 'slot插值'
+      description: '关于模板语法，v:on.v:bind,v:if,v:modal,关于插值，插html,插js语法'
     }
-    const tableData = [day1, day2]
+    const day3 = {
+
+    }
+    const day4 = {}
+    const day5 = {}
+    const tableData = [day1, day2, day3, day4, day5]
     return {
       tableData
     }
   },
   methods: {
-    printRouter () {
+    goPage1 () {
       router.push('page1')
+    },
+    goPage4 () {
+      router.push('page4')
     }
   }
 }

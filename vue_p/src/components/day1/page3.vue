@@ -22,8 +22,8 @@ export default {
         display: flex;
         flex-direction: column;
         button{
-            margin-top: 10px;
-            margin-left: 10px;
+            margin-top: 30px;
+            margin-left: 50vw;
             width: 160px;
             height: 40px;
             display: flex;
