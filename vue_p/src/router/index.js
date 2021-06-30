@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import home from '@/components/home'
-import page1 from '@/components/page1'
-import page2 from '@/components/page2'
-import page3 from '@/components/page3'
+import page1 from '@/components/day1/page1'
+import page2 from '@/components/day1/page2'
+import page3 from '@/components/day1/page3'
 
 Vue.use(Router)
 

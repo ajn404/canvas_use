@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="app">
+
+</canvas>
+
+<script type="text/javascript">
+    let canvas=document.getElementById('app');
+    function initWebGL(canvas) {
+        var gl = null;
+        var msg = "Your browser does not support WebGL," +
+            "or it is not enabled by default,";
+
+        try {
+            gl = canvas.getContext("experimental-webgl");
+        } catch (e) {
+            msg = "Error creating WebGL COntext!:" + e.toString()
+        }
+
+        if (!gl) {
+            alert(msg);
+            throw new Error(msg)
+        }
+        return gl
+    }
+    // let gl=initWebGL(canvas)
+    function initViewport(gl, canvas) {
+        gl.viewport(0, 0, canvas.width, canvas.height)
+    }
+    // initViewport(gl,canvas)
+
+    function createSquare(gl) {
+        var vertexBuffer;
+        vertexBuffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+        var verts = [
+            5., .5, 0.0,
+            -.5, .5, 0.0,
+            .5, -.5, 0.0,
+            -.5, -.5, 0.0
+        ]
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
+        var square = {
+            buffer: vertexBuffer, vertSize: 3, nVerts: 4, primtype: gl.TRIANGLE_STRIP
+        }
+        return square
+    }
+
+    // createSquare(gl)
+
+    //matrices
+    var projectMatrix,modalViewMatrix;
+    function initMatrices(canvas) {
+        modalViewMatrix=mat4.create();
+        mat4.translate(modalViewMatrix,modalViewMatrix,[0,0,-3.333]);
+
+        projectMatrix=mat4.create();
+        mat4.perspective(projectMatrix,Math.PI/4,canvas.width/canvas.height,1,10000)
+    }
+
+    //止
+    //英文文档看的有点蒙
+</script>
+</body>
+</html>

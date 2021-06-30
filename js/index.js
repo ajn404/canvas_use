@@ -1,4 +1,4 @@
-let color = $(".selected").css("background-color");
+ let color = $(".selected").css("background-color");
 let $canvas = $("canvas");
 let context = $canvas[0].getContext("2d");
 let lastEvent;
