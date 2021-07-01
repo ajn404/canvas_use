@@ -10,10 +10,10 @@
                         <el-menu-item index="1-2" @click="goPage4">模板语法等基础vue</el-menu-item>
                     </el-menu-item-group>
                     <el-menu-item-group title="less">
-                        <el-menu-item index="1-3">暂定</el-menu-item>
+                        <el-menu-item index="1-3"  @click="goday3">echart使用</el-menu-item>
                     </el-menu-item-group>
                     <el-submenu index="1-4">
-                        <template slot="title">选项4</template>
+                        <template slot="title">默认试图</template>
                         <el-menu-item index="1-4-1">选项4-1</el-menu-item>
                     </el-submenu>
                 </el-submenu>
@@ -116,6 +116,9 @@ export default {
     },
     goPage4 () {
       router.push('page4')
+    },
+    goday3 () {
+      router.push('echart_demo')
     }
   }
 }

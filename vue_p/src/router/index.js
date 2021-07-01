@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import home from '@/components/home'
+// day1
 import page1 from '@/components/day1/page1'
 import page2 from '@/components/day1/page2'
+// day2
 import page3 from '@/components/day1/page3'
 import page4 from '@/components/day2/page4'
 import page5 from '@/components/day2/page5'
-
+// day3
+import page6 from '@/components/day3/page6'
 Vue.use(Router)
 
 export default new Router({
@@ -40,6 +43,11 @@ export default new Router({
         name: 'page5',
         component: page5
       }]
+    },
+    {
+      path: '/echart_demo',
+      name: 'page6',
+      component: page6
     }
   ]
 })
