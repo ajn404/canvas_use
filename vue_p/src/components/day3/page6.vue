@@ -35,7 +35,8 @@ export default {
   },
   methods: {
     drawpid (id) {
-      var myChart = this.$echarts.init(document.getElementById(id))
+      let myChart = this.$echarts.init(document.getElementById(id))
+      console.log(myChart)
       myChart.setOption(this.option)
     },
     mounted () {
