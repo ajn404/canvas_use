@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.6/vue.js"></script>
+  </head>
+  <body>
+        <div id="mount-point">
+
+        </div>
+        <script>
+            //使用基础 Vue 构造器，创建一个“子类”。参数是一个包含组件选项的对象。
+            console.log(Vue.prototype)
+            console.log(Vue.constructor)
+            
+            // extend
+            var proFilte =Vue.extend({
+            
+                template:'<p>{{firstName}}|{{lastName}}alias:{{alias}}</p>',
+                data:function(){
+                    return{
+                        firstName:"hello",
+                        lastName:"helloh",
+                        alias:"hh"
+                    }
+                }
+            })
+
+            new proFilte().$mount('#mount-point')
+        </script>
+
+  </body>
+</html>
